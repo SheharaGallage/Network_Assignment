@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom small tweaks */
+:root{
+  --accent: #7c3aed; /* bright purple */
+  --accent-600: #6d28d9;
+  --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+}
+
+html, body, #__next {
+  height: 100%;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+.chat-scroll {
+  scrollbar-width: thin;
+}
+
+.focus-ring:focus {
+  outline: 3px solid rgba(59, 130, 246, 0.4);
+  outline-offset: 2px;
+}
+
+/* Login card shadow + small decorative tweaks */
+.card-glass {
+  background: rgba(255,255,255,0.98);
+  backdrop-filter: blur(6px);
+  box-shadow: var(--card-shadow);
+}
+
+.input-field {
+  box-shadow: 0 1px 0 rgba(16,24,40,0.03) inset;
+}
+
+.rounded-xl-very {
+  border-radius: 14px;
+}
+
+/* Button styles used across the app */
+.btn-primary {
+  background-color: var(--accent-600);
+  color: white;
+  padding: 0.65rem 1rem;
+  border-radius: 10px;
+  font-weight: 600;
+  box-shadow: 0 6px 18px rgba(99,102,241,0.18);
+}
+.btn-primary:hover { background-color: #5b21b6; transform: translateY(-1px); }
+
+.btn-danger {
+  background-color: #ef4444; /* red-500 */
+  color: white;
+  padding: 0.5rem 0.9rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+.btn-danger:hover { background-color: #dc2626; }
+
+/* Message bubble helpers */
+.msg-bubble { max-width: 75%; padding: 0.6rem 0.9rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(15,23,42,0.04); }
+.msg-from-me { background: rgba(124,58,237,0.08); align-self: flex-end; }
+.msg-from-other { background: #f8fafc; align-self: flex-start; }
+
+.chat-card {
+  width: 100%;
+  max-width: 1100px;
+}
+
+/* online dot */
+.online-dot { width:10px; height:10px; border-radius:999px; background: var(--accent); box-shadow: 0 0 6px rgba(124,58,237,0.6); display:inline-block }
+
+/* lighter background global for pages */
+.app-bg-light { background: linear-gradient(180deg, #efe9ff 0%, #f3e8ff 100%); }
